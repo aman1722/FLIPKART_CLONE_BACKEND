@@ -27,7 +27,7 @@ app.use("/products",productRouter)
 app.post("/orders",paymentControllers.orders);
 app.post("/verify",paymentControllers.verify);
 
-app.listen(process.env.port,async()=>{
+app.listen(process.env.PORT,async()=>{
     try {
       await connection
       console.log("connected to db!")
@@ -35,7 +35,7 @@ app.listen(process.env.port,async()=>{
      console.log("unable to connect db!")
      console.log(error)
     }
-   console.log(`app is running at port ${process.env.port}`)
+   console.log(`app is running at port ${process.env.PORT}`)
  })
 
 
